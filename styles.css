@@ -1,0 +1,370 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #ffabe6;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(244, 180, 225, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    max-height: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f121a1;
+}
+
+/* Hero section styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #e193d5 0%, black 100%);
+    color: #fff;
+    padding: 4rem 2rem;
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.hero-content .contract{
+    padding: 10px;
+    font-size: large;
+}
+.threelandurl a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    background-color: #f121a1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 2px;
+}
+.threelandurl a:hover{
+    background-color: black;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* About section styles */
+.about {
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffabe6;
+    color: #fff;
+}
+
+.about-image {
+    flex: 1;
+    text-align: left;
+    margin-right: 2rem;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    flex: 2;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Integrations section styles */
+.integrations {
+    background: linear-gradient(135deg, #e193d5 0%, black 100%);
+    padding: 4rem 2rem;
+}
+.integration-text{
+    color: white;
+}
+.integrations h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.integration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.integration-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.integration-card:hover {
+    transform: translateY(-10px);
+}
+
+.integration-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.history {
+    padding: 4rem 2rem;
+    background-color: #ffabe6;
+    text-align: center;
+}
+
+.timeline-book {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    perspective: 1000px;
+}
+
+.timeline-page {
+    display: none;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #f7f9fc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.timeline-page.active {
+    display: block;
+}
+
+.timeline-navigation {
+    margin-top: 1.5rem;
+}
+
+.timeline-navigation button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    background-color: #20232a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+.timeline-navigation button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+/* Voting section styles */
+.voting {
+    background-color: #f7f9fc;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.voting h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.vote-button {
+    display: inline-block;
+    background-color: #20232a;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.vote-button:hover {
+    background-color: #333;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f374cd;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: #f121a1;
+}
+
+.social-links a {
+    margin-left: 1.5rem;
+}
+
+.social-links img {
+    max-height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+
+.copyright {
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    nav li {
+        margin: 0 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        text-align: center;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about-image {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .integration-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .integration-card img {
+        max-width: 80px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        margin-bottom: 1rem;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
+}
